@@ -1,0 +1,12 @@
+========================================================
+If user is anonymous and the session has expired, the cart looses its contents,
+   so the page gets redirected to the home page else it will be redirected to the
+   checkout login page.
+   Open parameters:
+ loggedIn :    User is already logged in with login/password.
+ default :     User is anonymous or logged in from cookie.
+ <dsp:droplet name="ProfileSecurityStatus">
+ ====================================================
+ AvailableShippingMethodsDroplet droplet 
+ ====================================================
+ 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="atg_learning" default="Copy-JSP" >
+	
+	<property file="build.properties" />
+	
+	<path id="classpath">
+		<fileset dir="${atg_home}\DAS\lib" includes="**\*.jar" />
+		<fileset dir="${atg_home}\DPS\lib" includes="**\*.jar" />
+		<fileset dir="${atg_home}\DCS\lib" includes="**\*.jar" />
+		<fileset dir="${atg_home}\DSS\lib" includes="**\*.jar" />
+	</path>
+	
+	<target name="clean" description="Delete old jars">
+		<echo>clean</echo>
+		<delete dir="${srcdir}\lib" includes="**\*.jar" ></delete>
+		 <delete dir="${srcdir}\config" includes="**\*.jar" ></delete>
+  		<delete dir="${atg_home}\atg_learning"  />
+		<delete dir="${deployDir}\atg_production_lockserver.ear"  />
+		
+	</target>
+	
+    <target name="copy-ojdbc6" depends="clean">
+		<echo>copy-ojdbc6</echo>
+			<copy todir="${srcdir}\lib">
+				<fileset file="${ojdbc6_path}"></fileset>				
+			</copy>
+	</target>
+	
+    <target name="compile" description="compilimg the java source file" depends="copy-ojdbc6">
+		<echo>compile</echo>
+		<javac srcdir="${srcdir}\src" destdir="${srcdir}\lib" classpathref="classpath" />
+	</target>
+	
+	<target name="makejar" description="making jar file" depends="compile">
+		<echo>makejar</echo>
+		<jar basedir="${srcdir}\config" destfile="${srcdir}\config\config.jar"/>
+		<jar basedir="${srcdir}\lib" destfile="${srcdir}\lib\classes.jar"/>
+					
+	</target>
+	
+	<target name="copytoatg" depends="makejar" description="copy all folder structure to the atg">
+		<echo>copytoatg</echo>
+				
+		<mkdir dir="${destdir}"/>
+					<copy todir="${destdir}\config">
+						<fileset dir="${srcdir}\config"/>
+						</copy>
+					<copy todir="${destdir}\j2ee-apps">
+						<fileset dir="${srcdir}\j2ee-apps"/>
+					</copy>
+					<copy todir="${destdir}\META-INF">
+						<fileset dir="${srcdir}\META-INF"/>
+					</copy>
+					<copy todir="${destdir}\lib">
+						<fileset dir="${srcdir}\lib"/>
+					</copy>
+	
+	</target>
+	
+    <target name="runassembler" description="making earfile" depends="copytoatg">
+		<echo>runassembler</echo>
+		<exec executable="${dynamoBinDir}\runAssembler.bat">
+			<arg value="-jboss" />
+			<arg value="-server" />
+			<arg value="${servername_prod}" />
+			<arg value="${deployDir}\atg_production_lockserver.ear" />
+			<arg value="-m" />
+			<arg line="${moduleList}" />
+		</exec>
+		
+	</target>
+	
+    <target name="Copy-JSP" depends="runassembler">
+			
+		<echo>Copy-JSP</echo>
+		
+	</target>
+	
+    <target name="create-dodeploy" depends="Copy-JSP">
+		
+		<echo>create-dodeploy</echo>
+			<delete file="${deployDir}\atg_production_lockserver.ear.dodeploy"></delete>
+			<delete file="${deployDir}\ojdbc6.jar.dodeploy"></delete>
+			<touch file="${deployDir}\atg_production_lockserver.ear.dodeploy"></touch>
+			<touch file="${deployDir}\ojdbc6.jar.dodeploy"></touch>
+	</target>
+
+</project>

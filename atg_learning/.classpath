@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DSS/lib/resources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DSS/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DPS/lib/resources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DPS/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/resources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/servlet.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jsp-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/ice.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/spring-aop-1.2-rc1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jline-0.9.94.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/CommerceReferenceStore/Store/EStore/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/atg-coherence-classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/atg-jaxb-invoker.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/axis-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/bundle-support-standard-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/coherence.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/commons-codec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/commons-discovery-0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/ehcache-core-2.3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/filedist.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/groovy-all-1.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/guava-15.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/hibernate-validator-4.3.1.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/httpclient-4.2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/httpcore-4.2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jaxb-impl104.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jaxb-libs104.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jboss-logging-3.1.2.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jmdns-20.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/joda-time-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/juel-impl-2.2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/jxl-2.6.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/min-ejb3-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/mysql-connector-java-5.1.15-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/opssclassloader.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/orawsdl.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/owasp-java-html-sanitizer.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/protocol.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/slf4j-jdk14-1.5.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/subclassloader.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DAS/lib/tangosol.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/CommerceReferenceStore/Store/Mobile/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DCS/lib/classes.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DCS/lib/resources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/ext/sunec.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/ext/sunjce_provider.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/jce.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/resources.jar"/>
+	<classpathentry kind="output" path="lib"/>
+</classpath>

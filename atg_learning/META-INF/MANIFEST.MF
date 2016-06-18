@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config
+ATG-Required: DAS DPS DSS DAS Store.EStore
+ATG-Class-Path: lib/ojdbc6.jar lib/classes.jar
+ATG-Web-Module: j2ee-apps/store.war j2ee-apps/storedocroot.war
+Name: lib/classes.jar
+ATG-Client-Update-File: true

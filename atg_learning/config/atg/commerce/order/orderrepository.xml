@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+
+  <header>
+    <name>Write for Impcat</name>
+    <version>1.0</version>
+  </header>
+
+
+<!-- <item-descriptor  name="hardgoodShippingGroup" xml-combine="append">
+  <table name="LearnTest" type="auxiliary" id-column-name="id">
+	  <property name="learnTest" column-names="learn_test" data-type="string"/>
+  </table>
+</item-descriptor> -->
+
+
+<!-- paymentStatus 
+	<item-descriptor name="paymentStatus" xml-combine="append">
+		<table name="dcspp_pay_status" type="primary" id-column-name="status_id">
+			<property name="type" xml-combine="append">
+				<option value="PayPalStatus" code="6000" />
+			</property>
+		</table>
+	</item-descriptor>
+
+	PayPalStatus
+	<item-descriptor name="PayPalStatus" super-type="paymentStatus" sub-type-value="PayPalStatus">
+		<table name="dcspp_paypal_status" id-column-name="status_id">
+			<property name="protectionEligibility" column-name="protection_eligibility" data-type="string" display-name="Protection Eligibility">
+				<attribute name="propertySortPriority" value="40" />
+			</property>
+			<property name="correlationId" column-name="correlation_id" data-type="string" display-name="Correlation ID">
+				<attribute name="propertySortPriority" value="50" />
+			</property>
+			<property name="timestamp" column-name="time_stamp" data-type="timestamp" display-name="TimeStamp">
+				<attribute name="propertySortPriority" value="60" />
+			</property>
+		</table>
+	</item-descriptor>
+
+	paymentGroup
+	<item-descriptor name="paymentGroup" xml-combine="append">
+		<table name="dcspp_pay_group" type="primary" id-column-name="payment_group_id">
+			<property name="type" xml-combine="append">
+				<option value="paypal" code="104" />
+			</property>
+		</table>
+	</item-descriptor>
+
+	paypal
+	<item-descriptor name="paypal" super-type="paymentGroup" sub-type-value="paypal">
+		<table name="dcspp_pay_paypal" type="auxiliary" id-column-names="payment_group_id">
+			<property name="token" column-name="token" data-type="string" display-name="Paypal Token">
+				<attribute name="propertySortPriority" value="30" />
+			</property>
+			<property name="billingAgreementId" column-name="billing_agreement_id" data-type="string" display-name="Paypal Billing Agreement Id">
+				<attribute name="propertySortPriority" value="35" />
+			</property>
+			<property name="checkoutStatus" column-name="checkout_status" data-type="enumerated" display-name="Checkout Status">
+				<attribute name="propertySortPriority" value="40" />
+				<attribute name="useCodeForValue" value="false" />
+				<option value="PaymentActionNotInitiated" code="0" />
+				<option value="PaymentActionFailed" code="1" />
+				<option value="PaymentActionInProgress" code="2" />
+				<option value="PaymentCompleted" code="3" />
+			</property>
+			<property name="payerId" column-name="payer_id" data-type="string" display-name="Paypal Payer ID">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+			<property name="payerStatus" column-name="payer_status" data-type="enumerated" display-name="Paypal Payer Status">
+				<attribute name="propertySortPriority" value="20" />
+				<attribute name="useCodeForValue" value="false" />
+				<option value="unverified" code="0" />
+				<option value="verified" code="1" />
+			</property>
+			<property name="transactionId" column-name="transaction_id" data-type="string" display-name="Paypal Transaction ID">
+				<attribute name="propertySortPriority" value="30" />
+			</property>
+
+		</table>
+		<table name="dcspp_paypal_bill_addr" type="auxiliary" id-column-name="payment_group_id">
+			<property name="prefix" column-name="prefix" data-type="string" category-resource="categoryName"
+				display-name-resource="prefix">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+			<property name="firstName" column-name="first_name" data-type="string" category-resource="categoryName"
+				display-name-resource="firstName">
+				<attribute name="propertySortPriority" value="20" />
+			</property>
+			<property name="middleName" column-name="middle_name" data-type="string" category-resource="categoryName"
+				display-name-resource="middleName">
+				<attribute name="propertySortPriority" value="30" />
+			</property>
+			<property name="lastName" column-name="last_name" data-type="string" category-resource="categoryName"
+				display-name-resource="lastName">
+				<attribute name="propertySortPriority" value="40" />
+			</property>
+			<property name="suffix" column-name="suffix" data-type="string" category-resource="categoryName"
+				display-name-resource="suffix">
+				<attribute name="propertySortPriority" value="50" />
+			</property>
+			<property name="jobTitle" column-name="job_title" data-type="string" category-resource="categoryAddress"
+				display-name-resource="jobTitle">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+			<property name="companyName" column-name="company_name" data-type="string" category-resource="categoryAddress"
+				display-name-resource="companyName">
+				<attribute name="propertySortPriority" value="20" />
+			</property>
+			<property name="address1" column-name="address_1" data-type="string" category-resource="categoryAddress"
+				display-name-resource="address1">
+				<attribute name="propertySortPriority" value="30" />
+			</property>
+			<property name="address2" column-name="address_2" data-type="string" category-resource="categoryAddress"
+				display-name-resource="address2">
+				<attribute name="propertySortPriority" value="40" />
+			</property>
+			<property name="address3" column-name="address_3" data-type="string" category-resource="categoryAddress"
+				display-name-resource="address3">
+				<attribute name="propertySortPriority" value="50" />
+			</property>
+			<property name="city" column-name="city" data-type="string" category-resource="categoryAddress"
+				display-name-resource="city">
+				<attribute name="propertySortPriority" value="60" />
+			</property>
+			<property name="county" column-name="county" data-type="string" category-resource="categoryAddress"
+				display-name-resource="county">
+				<attribute name="propertySortPriority" value="70" />
+			</property>
+			<property name="stateAddress" column-name="state" data-type="string" category-resource="categoryAddress"
+				display-name-resource="stateAddress">
+				<attribute name="propertySortPriority" value="80" />
+			</property>
+			<property name="postalCode" column-name="postal_code" data-type="string" category-resource="categoryAddress"
+				display-name-resource="postalCode">
+				<attribute name="propertySortPriority" value="90" />
+			</property>
+			<property name="country" column-name="country" data-type="string" category-resource="categoryAddress"
+				display-name-resource="country">
+				<attribute name="propertySortPriority" value="100" />
+			</property>
+			<property name="phoneNumber" column-name="phone_number" data-type="string" category-resource="categoryContact"
+				display-name-resource="phoneNumber">
+				<attribute name="propertySortPriority" value="10" />
+			</property>
+			<property name="faxNumber" column-name="fax_number" data-type="string" category-resource="categoryContact"
+				display-name-resource="faxNumber">
+				<attribute name="propertySortPriority" value="20" />
+			</property>
+			<property name="email" column-name="email" data-type="string" category-resource="categoryContact"
+				display-name-resource="email">
+				<attribute name="propertySortPriority" value="30" />
+			</property>
+		</table>
+	</item-descriptor> -->
+
+
+	<!-- <item-descriptor name="paymentGroup" sub‐type‐property="type">
+	  <table name="dcspp_pay_group" type="primary" id‐column‐name="payment_group_id">
+		<property name="type" data ‐ type="enumerated" required="false">
+			<attribute name="useCodeForValue" value="false" />
+			<option value="giftCard" code="11" />
+		</property>
+	  </table>
+	</item-descriptor>
+	
+	<item-descriptor name="giftCard" super‐type="paymentGroup" sub‐type‐value="giftCard" display‐name‐resource="giftCard">
+		<table name="cfi_gift_card" type="auxiliary" id‐column‐names="payment_group_id">
+			<property name="giftCardNumber" column‐name="gft_card_number"></property>
+			<property name="giftCardPin" column‐name="gft_card_pin"></property>
+		</table>
+	</item-descriptor> -->
+
+</gsa-template>
