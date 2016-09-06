@@ -16,8 +16,10 @@
 		 <delete dir="${srcdir}\config" includes="**\*.jar" ></delete>
   		<delete dir="${atg_home}\atg_learning"  />
 		<delete dir="${deployDir}\atg_production_lockserver.ear"  />
+		<delete dir="${deployDir_pub}\atg_publishing_lockserver.ear"  />
 		
 	</target>
+	
 	
     <target name="copy-ojdbc6" depends="clean">
 		<echo>copy-ojdbc6</echo>
@@ -67,8 +69,18 @@
 			<arg value="-m" />
 			<arg line="${moduleList}" />
 		</exec>
+    	
+    	<exec executable="${dynamoBinDir}\runAssembler.bat">
+    				<arg value="-jboss" />
+    				<arg value="-server" />
+    				<arg value="${servername_pub}" />
+    				<arg value="${deployDir_pub}\atg_publishing_lockserver.ear" />
+    				<arg value="-m" />
+    				<arg line="${moduleList_pub}" />
+    			</exec>
 		
 	</target>
+	
 	
     <target name="Copy-JSP" depends="runassembler">
 			
@@ -83,6 +95,11 @@
 			<delete file="${deployDir}\ojdbc6.jar.dodeploy"></delete>
 			<touch file="${deployDir}\atg_production_lockserver.ear.dodeploy"></touch>
 			<touch file="${deployDir}\ojdbc6.jar.dodeploy"></touch>
+    	
+    		<delete file="${deployDir_pub}atg_publishing_lockserver.ear.dodeploy"> </delete>
+    		<delete file="${deployDir_pub}\ojdbc6.jar.dodeploy"> </delete>
+    		<touch file="${deployDir_pub}\atg_publishing_lockserver.ear.dodeploy"> </touch>
+    		<touch file="${deployDir_pub}\ojdbc6.jar.dodeploy"> </touch>
 	</target>
 
 </project>

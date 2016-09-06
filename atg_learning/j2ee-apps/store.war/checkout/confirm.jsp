@@ -15,6 +15,7 @@
   <dsp:importbean bean="/atg/commerce/order/purchase/CommitOrderFormHandler"/>
   <dsp:importbean bean="/atg/commerce/ShoppingCart"/>
   <dsp:importbean bean="/atg/commerce/order/purchase/RepriceOrderDroplet"/>
+  <dsp:importbean bean="/atg/commerce/order/DKDOrder"/>
   
   <c:set var="stage" value="confirm"/>
 
@@ -134,7 +135,11 @@
                   <fmt:message key="global_orderShippingItems.modifyCart"/>
                 </dsp:a>
               </div>
-              
+              <%-- message to display --%>
+              <div class="atg_order_msg_print">
+	       		<dsp:valueof bean="DKDOrder.messageToPrint"/>
+              </div>
+              <%-- message to display --%>
             </div>
           </jsp:body>
         </crs:checkoutContainer>

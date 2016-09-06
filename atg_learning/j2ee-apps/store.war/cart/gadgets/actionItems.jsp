@@ -1,3 +1,4 @@
+
 <%--
   This gadget renders the "Checkout", "Express Checkout" and "Continue Shopping"
   buttons on the Shopping Cart page.
@@ -89,5 +90,7 @@
 		<dsp:input id="atg_store_continue" iclass="atg_store_textButton"
 			type="submit" bean="CartModifierFormHandler.continueShopping"
 			value="${continueShoppingText}" />
+			
+			<dsp:textarea bean="CartModifierFormHandler.messageToPrint"/>
 	</div>
 </dsp:page>

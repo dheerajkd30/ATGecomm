@@ -51,9 +51,7 @@
 	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/CommerceReferenceStore/Store/Mobile/lib/classes.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DCS/lib/classes.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Common/ATG/ATG11.1/DCS/lib/resources.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/ext/sunec.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/ext/sunjce_provider.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/jce.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Common/Java/jdk1.7.0_55/jre/lib/resources.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files/Java/jdk1.7.0_55/jre/lib/jce.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files/Java/jdk1.7.0_55/jre/lib/resources.jar"/>
 	<classpathentry kind="output" path="lib"/>
 </classpath>

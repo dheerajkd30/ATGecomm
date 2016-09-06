@@ -1,3 +1,0 @@
-<div id="${id}" class="atg_store_scrollableProductSpotlight" dojoAttachPoint="wrapper">
-  <div dojoAttachPoint="containerNode" class="content"></div>
-</div>

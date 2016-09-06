@@ -5,7 +5,7 @@
 <gsa-template>
 
   <header>
-    <name>Write for Impcat</name>
+    <name>DKD</name>
     <version>1.0</version>
   </header>
 
@@ -174,4 +174,19 @@
 		</table>
 	</item-descriptor> -->
 
+	<!-- <item-descriptor name="msgPrint" sub‐type‐value="msgPrint" display‐name‐resource="msgPrint">
+		<table name="msg_to_print" type="primary" id‐column‐names="id">
+			<property name="msgToPrint" column‐name="msg_to_print"></property>
+			<property name="orderId" column‐name="order_id"></property>
+			<property name="profileId" column‐name="profile_id"></property>
+		</table>
+	</item-descriptor> -->
+	
+	<item-descriptor name="msgPrint" display-name-resource="msgPrint">
+		<table name="msg_to_print_tbl" type="primary" id-column-names="id">
+			<property name="msgToPrint" column-name="msg_to_print"></property>
+			<property name="orderId" column-name="order_id"></property>
+			<property name="profileId" column-name="profile_id"></property>
+		</table>
+	</item-descriptor>
 </gsa-template>

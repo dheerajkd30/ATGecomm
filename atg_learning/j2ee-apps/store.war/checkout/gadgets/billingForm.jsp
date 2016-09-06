@@ -55,13 +55,7 @@
   <dsp:droplet name="EnsureCreditCard">
     <dsp:param name="order" bean="ShoppingCart.current"/>
   </dsp:droplet>
-	
-	<!-- gift card-->
-	<dsp:input type="checkbox"/>
-	<dsp:input type="submit" bean="BillingFormHandler.billingWithNewAddressAndNewCard" 
-                       value="${reviewOrderButtonText}" alt="${reviewOrderButtonText}" id="submit" 
-                       iclass="atg_store_actionSubmit atg_behavior_disableOnClick"/>
-	<!--gift card -->				   
+
   <div class="atg_store_checkoutOption" id="atg_store_checkoutOptionArea">
 
     <dsp:getvalueof var="creditCards" vartype="java.lang.Object" bean="Profile.creditCards"/>
